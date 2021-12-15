@@ -1,0 +1,240 @@
+@charset "utf-8";
+/*
+* SaSS Generates CSS
+* Assignment:   Final Project - Dice
+* Class:        COMP 2132 (Thurs.)
+* Name:         Arno Princeston Pan
+* ID:           A00823325
+* Date:         12/03/2021
+*/
+
+@import "variables.scss";
+@import "mixins.scss";
+
+html
+{
+	color: #2D2D2D; /* font colour*/
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box; 
+}
+
+*, *:before, *:after
+{
+	box-sizing: inherit;
+}
+
+body
+{
+	background: $bodyBackGroundColor;
+}
+
+h1, h2, h3, h4, h5, h6, p
+{
+	margin: 15px;
+}
+
+p
+{
+	font-size: larger;
+}
+
+header
+{
+	display: flex;
+	flex-direction: column; /* makes the "slogan" in column */
+	flex-wrap: wrap;
+	word-break: break-word;
+
+	font-family: 'Lora', sans-serif;
+    h1
+    {
+        background-color: $labelBackGroundColor;
+        max-width: 500px;
+        @include fancyYourBox($firstColor, 10px, 15px, 0px, 3px, $firstColor);
+    }
+}
+
+main
+{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	max-width: 100%;
+}
+
+
+/* Containers */
+
+.flexbox-container-overall
+{
+	display: flex;
+	flex-direction: column;
+
+	max-width: 100%;
+}
+
+.flexbox-container-header
+{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	background-color: $secondColor;
+
+	max-width: 100%;
+
+	text-shadow: 2px 4px 4px grey;
+
+    @include fancyYourBox($firstColor, 3px, 3px, 3px, 3px, slategrey);
+}
+
+.flexbox-container-main
+{
+	margin-top: 3px;
+    padding: 10px;
+
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+
+	max-width: 100%;
+
+	background-color: $secondColor;
+
+    @include fancyYourBox($firstColor, 3px, 3px, 3px, 3px, slategrey);
+}
+
+#top-display
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 3px;
+    @include fancyYourBox($firstColor, 0px, 2px, 2px, 3px, black);
+}
+
+.main-display
+{
+    display: flex;
+    flex-direction: row; // separates COMP | PLAYER
+
+    @include fancyYourBox($firstColor, 0px, 2px, 2px, 3px, black);
+}
+
+.players-display
+{
+    margin: 5px;
+    @include fancyYourBox($firstColor, 3px, 3px, 3px, 3px, slategrey);
+}
+
+.images-display
+{
+	margin: 1px;
+}
+
+#button-display
+{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include fancyYourBox($firstColor, 0px, 2px, 2px, 3px, black);
+}
+
+.button-style
+{
+	padding: 5px;
+	width: 200px;
+	height: 50px;
+}
+
+.flexbox-container-footer
+{
+	margin-top: 3px;
+	text-shadow: 2px 4px 4px grey;
+
+	display: flex;
+	background: $secondColor;
+
+    @include fancyYourBox($firstColor, 3px, 3px, 3px, 5px, slategrey);
+}
+
+
+/* Link PseudoClasses */
+
+a:link
+{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-transform: uppercase;
+	color: purple;
+	background: lightblue;
+}
+
+a:visited
+{
+	color: maroon;
+}
+
+a:active
+{
+	color: red;
+	background-color: orange;
+}
+
+footer
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	
+	margin-top: -5px;
+
+	font-weight: bolder;
+}
+
+/* Other screen sizes */
+
+@media screen and (max-width: 320px)
+{
+
+}
+
+@media screen and (max-width: 415px)
+{
+	.images-display
+	{
+		max-width: 100px;
+		max-height: 100px;
+	}
+
+	.players-display div
+	{
+		display: flex;
+		align-items: center;
+	}
+
+	.main-display
+	{
+		flex-direction: column;
+	}
+
+	#button-display div
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 1300px)
+{
+}

@@ -1,0 +1,12 @@
+/*
+* SaSS Mixins
+*/
+
+// define a mixin (define your function)
+
+@mixin fancyYourBox($borderColor, $xoffset, $yoffset, $zoffset, $edgeRadius, $shadowColor)
+{
+    border:        1px solid $borderColor;
+    border-radius: $edgeRadius;
+    box-shadow:    $xoffset $yoffset $zoffset $shadowColor;
+}

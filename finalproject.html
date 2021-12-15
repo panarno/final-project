@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- 
+name:   arno princeston pan
+id:     a00823325
+class:  comp 2132 web dev w/ javascript (thurs.)
+note:   final project - dice game
+update: v1
+-->
+
+<html lang = 'en'>
+    <head>
+        <meta charset = 'utf-8'  />
+        <meta name = 'viewport' content = 'width=device-width, initial-scale = 1.0'  />
+        <link rel = 'stylesheet' href = 'styles/styles.css'    />
+
+        <title>Final Project: Dice Game</title>
+    </head>
+    <body>
+
+        <div class = 'flexbox-container-overall'>
+
+            <div id = 'top' class = 'flexbox-container-header'>
+                <header>
+                    <h1>Dice Game</h1>
+                    <p>We can beat the COMP right? Because we are PLAYER #1.</p>
+                </header>
+            </div>
+
+            <div class = 'flexbox-container-main'>
+                <div>
+
+                    <div id = 'top-display'>
+                        <h2 id = "round-display">ROUND</h2>
+                    </div>
+
+                    <div class = 'main-display'>
+
+                        <!-- COMP -->
+                        <div class = 'players-display'>
+                            <!-- COMP LABEL -->
+                            <div>
+                                <h3>COMP</h3>
+                            </div>
+                            <!-- TOTAL COMP SCORE -->
+                            <div>
+                                <h3 id = "computers-score-total">TOTAL SCORE</h3>
+                            </div>
+                            <!-- CURRENT COMP SCORE -->
+                            <div>
+                                <h3 id = "computers-score-now">CURRENT SCORE</h3>
+                            </div>
+                            <!-- DICE IMAGE -->
+                            <div>
+                                <img class = "images-display" id = "dice-image-one" src = 'images/dice-0.png' alt = 'images/nodice.jpg'/>
+                                <img class = "images-display" id = "dice-image-two" src = 'images/dice-0.png' alt = 'images/dice-0.png'/>
+                            </div>
+                        </div>
+
+                        <!-- PLAYER -->
+                        <div class = 'players-display'>
+                            <!-- PLAYER LABEL -->
+                            <div>
+                                <h3>PLAYER</h3>
+                            </div>
+                            <!-- PLAYER SCORE -->
+                            <div>
+                                <h3 id = "players-score-total">TOTAL SCORE</h3>
+                            </div>
+                            <!-- CURRENT PLAYER SCORE -->
+                            <div>
+                                <h3 id = "players-score-now">CURRENT SCORE</h3>
+                            </div>
+                            <!-- DICE IMAGE -->
+                            <div>
+                                <img class = "images-display" id = "dice-image-three" src = 'images/dice-0.png' alt = 'images/dice-0.png'/>
+                                <img class = "images-display" id = "dice-image-four" src = 'images/dice-0.png' alt = 'images/dice-0.png'/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div id = 'button-display'>
+                        <div>
+                            <button class = "button-style" id = "button-one">START</button>
+                            <button class = "button-style" id = "button-two">RESET</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div>
+            <footer class = "flexbox-container-footer">
+                <h3>BCIT Part-Time Studies | Fall 2021 | COMP 2132 | Arno Princeston Pan | A00823325 </h3>
+                <h4><a href = "#top">TOP OF PAGE</a></h4>
+            </footer>
+        </div>
+
+        <div id = 'popUp'>
+
+        </div>
+
+        <script src = 'https://code.jquery.com/jquery-3.6.0.min.js'></script>
+        <script src = 'scripts/finalproject.js'></script>
+    </body>
+</html>
