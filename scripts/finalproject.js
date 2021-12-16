@@ -80,6 +80,10 @@ var     computerDiceTwo;    // computer's dice 2 #
 var     playerDiceOne;      // player's dice 1 #
 var     playerDiceTwo;      // player's dice 2 #
 
+    // Results Feedback
+const   winningSound = `https://www.myinstants.com/media/sounds/homer-woohoo.mp3`;
+const   losingSound  = `https://www.myinstants.com/media/sounds/070-challenge-lose.mp3`;
+const   tieSound     = `https://www.myinstants.com/media/sounds/shocked.mp3`;
 
 // Player Object
 
@@ -309,6 +313,11 @@ Dice.prototype.checkDice = function()
 
 
 // Functions
+function playAudio(link){
+    var sound = new Audio(link);
+    sound.play();
+};
+
 function playRound()
 {
     if(roundCount >= roundMax)
@@ -346,12 +355,14 @@ function playRound()
             computerScoreNowDisplay.textContent     =   `(; TT o TT)`; 
             $diceImageThree.fadeTo("slow", 0.5);
             $diceImageFour.fadeTo("slow", 0.5);
+            playAudio(winningSound);
         }else if(playerPlayer.getScoreTotal() < computerPlayer.getScoreTotal())
         {
             playerScoreNowDisplay.textContent       =   `(TT o TT ;)`; 
             computerScoreNowDisplay.textContent     =   `\\ (o￣∇￣o) / !!!COMPUTER WINS!!!`; 
             $diceImageOne.fadeTo("slow", 0.5);
             $diceImageTwo.fadeTo("slow", 0.5);
+            playAudio(losingSound);
         }
         else
         {
@@ -361,6 +372,7 @@ function playRound()
             $diceImageTwo.fadeTo("slow", 0.5);
             $diceImageThree.fadeTo("slow", 0.5);
             $diceImageFour.fadeTo("slow", 0.5);
+            playAudio(tieSound);
         }
     }
 }
