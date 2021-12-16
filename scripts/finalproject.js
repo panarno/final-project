@@ -342,19 +342,21 @@ function playRound()
         roundDisplay.textContent                    =   `ROUND 3: GAME OVER`;
         if(playerPlayer.getScoreTotal() > computerPlayer.getScoreTotal())
         {
-            playerScoreNowDisplay.textContent       =   `!!!PLAYER WINS!!!`; 
+            playerScoreNowDisplay.textContent       =   `!!!PLAYER WINS!!! \\ (o￣∇￣o) / `; 
+            computerScoreNowDisplay.textContent     =   `(; TT o TT)`; 
             $diceImageThree.fadeTo("slow", 0.5);
             $diceImageFour.fadeTo("slow", 0.5);
         }else if(playerPlayer.getScoreTotal() < computerPlayer.getScoreTotal())
         {
-            computerScoreNowDisplay.textContent     =   `!!!COMPUTER WINS!!!`; 
+            playerScoreNowDisplay.textContent       =   `(TT o TT ;)`; 
+            computerScoreNowDisplay.textContent     =   `\\ (o￣∇￣o) / !!!COMPUTER WINS!!!`; 
             $diceImageOne.fadeTo("slow", 0.5);
             $diceImageTwo.fadeTo("slow", 0.5);
         }
         else
         {
-            playerScoreNowDisplay.textContent       =   `RARE TIE`; 
-            computerScoreNowDisplay.textContent     =   `RARE TIE`; 
+            playerScoreNowDisplay.textContent       =   `RARE TIE (・o・ )`; 
+            computerScoreNowDisplay.textContent     =   `( ・o・)RARE TIE`; 
             $diceImageOne.fadeTo("slow", 0.5);
             $diceImageTwo.fadeTo("slow", 0.5);
             $diceImageThree.fadeTo("slow", 0.5);
